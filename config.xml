@@ -22,5 +22,6 @@
         
         <gap:plugin name="org.apache.cordova.contacts" />
         <gap:plugin name="org.apache.cordova.file" />
+        <gap:plugin name="org.apache.cordova.dialogs" />
         
     </widget>
