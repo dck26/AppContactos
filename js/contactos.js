@@ -12,15 +12,15 @@ var contactos = {
         phones[0] = new ContactField('home',tel,true);
         phones[1] = new ContactField('work','123434',false);
         var mails = []; 
-        emails[0] = new ContactField('personal',mail,false);
-        emails[1] = new ContactField('work','daniel.cuadra@gmail.com',true);
+        mails[0] = new ContactField('personal',mail,false);
+        mails[1] = new ContactField('work','daniel.cuadra@gmail.com',true);
         
         var contacto = {
             'displayName': nombre,
             'nickname': nombre,
             'name': null,
             'phoneNumbers': null,
-            'emails':null
+            'emails':mails
         };
         var miContacto = navigator.contacts.create(contacto);
         miContacto.save(contactos.guardado,contactos.error);
@@ -44,7 +44,7 @@ var contactos = {
             var nom = c[i].name.formatted;
             var tel = c[i].tel[0].value;
             cont++;
-            $('#cMostrar').append('<li<a href="tel:'+tel+'">'+nom+'</a></li>');
+            $('#cMostrar').append('<li><a href="tel:'+tel+'">'+nom+'</a></li>');
         }
         if(cont == 0)
             $('#cMostrar').html('<li>Sin leer contactos</li>');
