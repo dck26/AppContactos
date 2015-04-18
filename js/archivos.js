@@ -10,7 +10,7 @@ var archivos = {
         ea.createWriter(archivos.escritor,archivos.error);
     },
     escritor: function(e){//Obtener el escritor como objeto
-        var: cont = $('#aSend').val();
+        var cont = $('#aSend').val();
         e.write(cont);
         e.onwriteend = function(evt){
             navigator.notification.alert('El archivo fue creado exitosamente',null, 'Archivos','Aceptar');
