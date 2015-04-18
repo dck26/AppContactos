@@ -34,7 +34,7 @@ var contactos = {
         listar: function(){
             var filtro = ['*'];
             var opc = new ContactFindOptions();
-            opc.filter ) '';
+            opc.filter = '';
             navigator.contacts.find(filtro,contactos.lista,contactos.error);
         },
     lista: function(c){
